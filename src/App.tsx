@@ -1,10 +1,11 @@
 import React from "react";
+import Router from "./router/Router";
 import "./sass/main.scss";
 function App() {
   return (
-    <div className="App">
-      <h1>Hacker news</h1>
-    </div>
+    <>
+      <Router />
+    </>
   );
 }
 
