@@ -1,0 +1,28 @@
+@import "../abstracts/mixins";
+@import "../abstracts/colors";
+.tab-container {
+  @include flex(row, center, center);
+
+  & .tab {
+    @include rounded(2px);
+    width: 6rem;
+    text-align: center;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    font-weight: 500;
+    @include transition;
+    &.inactive {
+      border: 1px solid #d6d6d6;
+      color: #606060;
+    }
+    &.active {
+      border: 1px solid $hacker-news-primary-color;
+      border-right: none;
+      color: $hacker-news-primary-color;
+    }
+  }
+  & .tab:last-child.active {
+    border: 1px solid $hacker-news-primary-color;
+    color: $hacker-news-primary-color;
+  }
+}
