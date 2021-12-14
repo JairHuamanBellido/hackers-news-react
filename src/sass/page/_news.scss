@@ -1,5 +1,12 @@
 @import "../abstracts/mixins";
 .news-container {
-  margin-top: 5rem;
+  width: 80%;
+  position: relative;
+  margin: 5rem auto 0;
   @include flex(column, flex-start, center);
+
+  & .news-all {
+    width: 100%;
+    margin-top: 4rem;
+  }
 }

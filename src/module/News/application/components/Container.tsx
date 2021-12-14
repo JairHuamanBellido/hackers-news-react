@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { TabContext } from "../../../../core/context/Tab.context";
+import AllNewsSection from "./AllNewsSection";
 import Tabs from "./Tabs";
 
 export default function Container() {
@@ -14,6 +15,9 @@ export default function Container() {
         value={{ currentTabActive: tabActive, onClickTab: onClickTab }}
       >
         <Tabs labels={["All", "My faves"]} />
+        <div className="news-all">
+          <AllNewsSection />
+        </div>
       </TabContext.Provider>
     </div>
   );
