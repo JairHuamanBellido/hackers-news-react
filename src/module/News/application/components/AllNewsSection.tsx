@@ -68,8 +68,8 @@ export default function NewsSection() {
       {isLoaded && (
         <>
           <div className="news-list">
-            {data?.map((news, i) => (
-              <Card key={i} news={news} />
+            {data?.map((news) => (
+              <Card key={news.id} news={news} />
             ))}
           </div>
           <Pagination

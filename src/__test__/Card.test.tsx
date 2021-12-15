@@ -6,7 +6,7 @@ import { News } from "../module/News/Domain/interface/News.interface";
 describe("Card component", () => {
   const newsMock: News = {
     author: "Jair Orlando",
-    id: 2022312,
+    id: "2022312",
     time: "3 minutes ago",
     title: "How to be a frontend developer",
     url: "url",
