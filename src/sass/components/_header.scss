@@ -16,7 +16,7 @@ header {
   }
 }
 
-@media screen and(max-width: $table-portrait) {
+@media screen and(max-width: $tablet-portrait) {
   header {
     padding: 0px;
     & h1 {
