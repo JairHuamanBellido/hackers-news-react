@@ -29,3 +29,15 @@
     @include flex(row, center, center);
   }
 }
+
+@media screen and(max-width: $table-portrait) {
+  .news-container {
+    width: 90%;
+    margin: 2rem auto 0;
+
+    & .news-all{ 
+      margin-top: 2rem;
+    }
+  }
+
+}
