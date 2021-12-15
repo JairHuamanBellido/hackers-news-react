@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { News } from "../../Domain/interface/News.interface";
 import { GetFavoriteNewsService as Service } from "../../Domain/service/GetFavoriteNewsService";
+import { RemoveFavoriteNewsService } from "../../Domain/service/RemoveFavoriteNewsService";
 import List from "./List";
 export default function FavoriteNewsSection() {
   const [favoriteNews, setFavoritesNews] = useState<News[] | null>(
@@ -9,6 +10,7 @@ export default function FavoriteNewsSection() {
 
   const onRemove = (news: News) => {
     setFavoritesNews((favoriteNews as News[]).filter((n) => n.id !== news.id));
+    RemoveFavoriteNewsService.execute(news);
   };
 
   return (
