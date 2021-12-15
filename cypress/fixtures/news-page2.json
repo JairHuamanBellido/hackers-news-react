@@ -1,0 +1,115 @@
+{
+  "hits": [
+    {
+      "created_at": "2021-12-10T19:00:26.000Z",
+      "title": null,
+      "url": null,
+      "author": "deergomoo",
+      "points": null,
+      "story_text": null,
+      "comment_text": "For Tailwind in particular, it’s easier to understand the benefit if you consider the three main problems it solves:\u003cp\u003e1. Naming things “semantically” is a giant pain. Sure “user-card” is easy enough, but when you have to start giving names to all the little bits of the user card it quickly becomes absurd. Yeah you can use child selectors and stuff to ease that a little but then you’re basically re-writing your HTML in CSS. Tailwind’s approach is to say “have a UserCard.{html,vue,js} component and move on”.\u003cp\u003e2. Most codebases have multiple people working on them, and those people are often not CSS experts. It is very common to end up with giant stylesheets that only grow with time, because people are too scared to ever remove or change things in case it breaks something seemingly unrelated. Utility frameworks (and other modern approaches like styled components) keep the styles directly attached to the HTML being styled. You can make any change you like, safe in the knowledge that you are only affecting the thing in front of you.\u003cp\u003e3. It pushes you into a design system. Sure this is achievable through Sass\u0026#x2F;CSS variables, but for Tailwind it’s right there with a sensible default out of the box, and easily configured if you need something different.\u003cp\u003eI think the important thing is, Tailwind doesn’t enable you to do anything you can’t do by writing well structured CSS, because ultimately it \u003ci\u003eis\u003c/i\u003e just CSS. However, people aren’t perfect, and I believe that Tailwind does a genuinely good job of helping people avoid common footguns.\u003cp\u003eIf your team is largely composed of CSS wizards who are fine to carry on as normal, that’s great, you probably won’t get much out of Tailwind. But for a lot of us, the price of remembering some (very consistent, to be fair) shorthand class names is well worth not wasting hours battling the cascade and suchlike.",
+      "num_comments": null,
+      "story_id": 29501110,
+      "story_title": "Tailwind CSS v3.0",
+      "story_url": "https://tailwindcss.com/blog/tailwindcss-v3",
+      "parent_id": 29502712,
+      "created_at_i": 1639162826,
+      "_tags": ["comment", "author_deergomoo", "story_29501110"],
+      "objectID": "29513987",
+      "_highlightResult": {
+        "author": {
+          "value": "deergomoo",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "comment_text": {
+          "value": "For Tailwind in particular, it’s easier to understand the benefit if you consider the three main problems it solves:\u003cp\u003e1. Naming things “semantically” is a giant pain. Sure “user-card” is easy enough, but when you have to start giving names to all the little bits of the user card it quickly becomes absurd. Yeah you can use child selectors and stuff to ease that a little but then you’re basically re-writing your HTML in CSS. Tailwind’s approach is to say “have a UserCard.{html,\u003cem\u003evue,js\u003c/em\u003e} component and move on”.\u003cp\u003e2. Most codebases have multiple people working on them, and those people are often not CSS experts. It is very common to end up with giant stylesheets that only grow with time, because people are too scared to ever remove or change things in case it breaks something seemingly unrelated. Utility frameworks (and other modern approaches like styled components) keep the styles directly attached to the HTML being styled. You can make any change you like, safe in the knowledge that you are only affecting the thing in front of you.\u003cp\u003e3. It pushes you into a design system. Sure this is achievable through Sass/CSS variables, but for Tailwind it’s right there with a sensible default out of the box, and easily configured if you need something different.\u003cp\u003eI think the important thing is, Tailwind doesn’t enable you to do anything you can’t do by writing well structured CSS, because ultimately it \u003ci\u003eis\u003c/i\u003e just CSS. However, people aren’t perfect, and I believe that Tailwind does a genuinely good job of helping people avoid common footguns.\u003cp\u003eIf your team is largely composed of CSS wizards who are fine to carry on as normal, that’s great, you probably won’t get much out of Tailwind. But for a lot of us, the price of remembering some (very consistent, to be fair) shorthand class names is well worth not wasting hours battling the cascade and suchlike.",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["vuejs"]
+        },
+        "story_title": {
+          "value": "Tailwind CSS v3.0",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_url": {
+          "value": "https://tailwindcss.com/blog/tailwindcss-v3",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+
+    {
+      "created_at": "2021-12-01T18:54:45.000Z",
+      "title": null,
+      "url": null,
+      "author": "oulipo",
+      "points": null,
+      "story_text": null,
+      "comment_text": "Gouach (\u003ca href=\"https:\u0026#x2F;\u0026#x2F;gouach.com\" rel=\"nofollow\"\u003ehttps:\u0026#x2F;\u0026#x2F;gouach.com\u003c/a\u003e) | Senior and Junior fullstack developers (Python, NodeJS, VueJS, GCloud). | Full-time | Remote \u0026#x2F; Bordeaux (France) \u0026#x2F; Berlin (Germany)\u003cp\u003eGouach is the first electric-bike battery that\u0026#x27;s 100% repairable in under 10 minutes, safely and easily.\u003cp\u003eNot only is it better for the environment, by reducing the carbon footprint of the battery (up to 60%), but it is also connected, providing many features for an easier integration in any e-bike, e-scooter, e-moped, or other lightweight electric vehicles.\u003cp\u003eIt allows for reuse of cells in second-life application, and easier recycling.\u003cp\u003eWe\u0026#x27;re a bike-loving team, that has raised funds and are looking for a senior and a junior fullstack profile to join our backend \u0026#x2F; frontend \u0026#x2F; devops team and help us create the best and most sustainable battery for e-bikes, and help us solve the many fun and interesting challenges in building a robust and connected IoT product!",
+      "num_comments": null,
+      "story_id": 29405056,
+      "story_title": "Ask HN: Who is hiring? (December 2021)",
+      "story_url": "link",
+      "parent_id": 29405056,
+      "created_at_i": 1638384885,
+      "_tags": ["comment", "author_oulipo", "story_29405056"],
+      "objectID": "29407610",
+      "_highlightResult": {
+        "author": {
+          "value": "oulipo",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "comment_text": {
+          "value": "Gouach (\u003ca href=\"https://gouach.com\" rel=\"nofollow\"\u003ehttps://gouach.com\u003c/a\u003e) | Senior and Junior fullstack developers (Python, NodeJS, \u003cem\u003eVueJS\u003c/em\u003e, GCloud). | Full-time | Remote / Bordeaux (France) / Berlin (Germany)\u003cp\u003eGouach is the first electric-bike battery that's 100% repairable in under 10 minutes, safely and easily.\u003cp\u003eNot only is it better for the environment, by reducing the carbon footprint of the battery (up to 60%), but it is also connected, providing many features for an easier integration in any e-bike, e-scooter, e-moped, or other lightweight electric vehicles.\u003cp\u003eIt allows for reuse of cells in second-life application, and easier recycling.\u003cp\u003eWe're a bike-loving team, that has raised funds and are looking for a senior and a junior fullstack profile to join our backend / frontend / devops team and help us create the best and most sustainable battery for e-bikes, and help us solve the many fun and interesting challenges in building a robust and connected IoT product!",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["vuejs"]
+        },
+        "story_title": {
+          "value": "Ask HN: Who is hiring? (December 2021)",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2021-12-01T17:31:07.000Z",
+      "title": null,
+      "url": null,
+      "author": "numbsafari",
+      "points": null,
+      "story_text": null,
+      "comment_text": "Bainbridge Health | Data and Solutions Engineers, Growth, Pharmacists, and Clinical Data Analysts | Go, Python, VueJS, SQL | Remote (US) | Full-time | \u003ca href=\"https:\u0026#x2F;\u0026#x2F;angel.co\u0026#x2F;l\u0026#x2F;2h5mKx\" rel=\"nofollow\"\u003ehttps:\u0026#x2F;\u0026#x2F;angel.co\u0026#x2F;l\u0026#x2F;2h5mKx\u003c/a\u003e\u003cp\u003eReceiving medication at a hospital is one of the most dangerous things you can do. Ensuring safe and secure medication supplies is also one of the most complex and expensive things hospitals do. There is a mountain of data, but very little of it is used effectively.\u003cp\u003eWe work with leading hospital pharmacies across the United States to translate data into actionable clinical and supply chain insights. Leveraging their own administration and pharmacy preparation datasets, we guide hospitals to safer, more efficient medication use. We also provide the most comprehensive benchmarking on medication use and decision support available to assist with governance, research, and supply chain development across industry through partnerships with leading organizations.\u003cp\u003eJoin a team that is focused on real world improvements that can be measured month-to-month, quarter-to-quarter, in terms of better care, better outcomes, and lower prices for real people. We are actively looking for a Data Engineer and a Solutions Engineer. The first role is primarily focused on building our internal platforms and tools, while the second is focused on supporting the full Customer Experience from pre-sales to on-going use.\u003cp\u003eWe are a Python, Go, SQL (MS-SQL, Oracle on the customer side, BigQuery in-house), and Javascript (VueJS) shop. We build on Google Kubernetes Engine and similar tools. We also do systems integration with existing hospital platforms. So, if you have experience with traditional Windows on-prem operations stack, there\u0026#x27;s a definite place for you on our team.\u003cp\u003eIf you have prior experience with healthcare, and especially hospital, technologies, and are looking to work with a modern tech stack and a more focused team, that\u0026#x27;s a plus.\u003cp\u003eOutside of engineering, we are also hiring a Growth Manager, a Clinical Pharmacist, and Clinical Data Analysts.\u003cp\u003eA spin-out of the Children\u0026#x27;s Hospital of Philadelphia, our corporate HQ is based in Philadelphia, PA, but our team is remote with folks all across the country.",
+      "num_comments": null,
+      "story_id": 29405056,
+      "story_title": "Ask HN: Who is hiring? (December 2021)",
+      "story_url": "link2",
+      "parent_id": 29405056,
+      "created_at_i": 1638379867,
+      "_tags": ["comment", "author_numbsafari", "story_29405056"],
+      "objectID": "29406551",
+      "_highlightResult": {
+        "author": {
+          "value": "numbsafari",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "comment_text": {
+          "value": "Bainbridge Health | Data and Solutions Engineers, Growth, Pharmacists, and Clinical Data Analysts | Go, Python, \u003cem\u003eVueJS\u003c/em\u003e, SQL | Remote (US) | Full-time | \u003ca href=\"https://angel.co/l/2h5mKx\" rel=\"nofollow\"\u003ehttps://angel.co/l/2h5mKx\u003c/a\u003e\u003cp\u003eReceiving medication at a hospital is one of the most dangerous things you can do. Ensuring safe and secure medication supplies is also one of the most complex and expensive things hospitals do. There is a mountain of data, but very little of it is used effectively.\u003cp\u003eWe work with leading hospital pharmacies across the United States to translate data into actionable clinical and supply chain insights. Leveraging their own administration and pharmacy preparation datasets, we guide hospitals to safer, more efficient medication use. We also provide the most comprehensive benchmarking on medication use and decision support available to assist with governance, research, and supply chain development across industry through partnerships with leading organizations.\u003cp\u003eJoin a team that is focused on real world improvements that can be measured month-to-month, quarter-to-quarter, in terms of better care, better outcomes, and lower prices for real people. We are actively looking for a Data Engineer and a Solutions Engineer. The first role is primarily focused on building our internal platforms and tools, while the second is focused on supporting the full Customer Experience from pre-sales to on-going use.\u003cp\u003eWe are a Python, Go, SQL (MS-SQL, Oracle on the customer side, BigQuery in-house), and Javascript (\u003cem\u003eVueJS\u003c/em\u003e) shop. We build on Google Kubernetes Engine and similar tools. We also do systems integration with existing hospital platforms. So, if you have experience with traditional Windows on-prem operations stack, there's a definite place for you on our team.\u003cp\u003eIf you have prior experience with healthcare, and especially hospital, technologies, and are looking to work with a modern tech stack and a more focused team, that's a plus.\u003cp\u003eOutside of engineering, we are also hiring a Growth Manager, a Clinical Pharmacist, and Clinical Data Analysts.\u003cp\u003eA spin-out of the Children's Hospital of Philadelphia, our corporate HQ is based in Philadelphia, PA, but our team is remote with folks all across the country.",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["vuejs"]
+        },
+        "story_title": {
+          "value": "Ask HN: Who is hiring? (December 2021)",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    }
+  ]
+}

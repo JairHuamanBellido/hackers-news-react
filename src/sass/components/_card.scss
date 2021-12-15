@@ -1,0 +1,47 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+.news-card {
+  width: 48%;
+  height: 90px;
+  position: relative;
+  @include rounded(6px);
+  @include flex(row, flex-start, center);
+  @include transition;
+  border: 1px solid #979797;
+  margin-bottom: 30px;
+  background: #fff;
+  &:hover {
+    opacity: 0.4;
+  }
+  & .content {
+    width: 85%;
+    padding: 16px 26px;
+    & .label {
+      @include flex(row, flex-start, center);
+      margin-bottom: 8px;
+      & p {
+        font-size: 11px;
+        margin-left: 8px;
+        color: #767676;
+      }
+    }
+    & .title {
+      color: #6b6b6b;
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+  & .favorite {
+    cursor: pointer;
+    width: 15%;
+    background-color: rgba(96, 96, 96, 0.06);
+    @include flex(row, center, center);
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: $table-portrait) {
+  .news-card {
+    width: 100%;
+  }
+}

@@ -9,4 +9,18 @@
     width: 100%;
     margin-top: 4rem;
   }
+
+  & .news-list,
+  & .loading {
+    margin-top: 32px;
+  }
+  & .news-list {
+    @include flex(row, space-between, center);
+    flex-wrap: wrap;
+  }
+
+  & .loading {
+    width: 100%;
+    @include flex(row, center, center);
+  }
 }
