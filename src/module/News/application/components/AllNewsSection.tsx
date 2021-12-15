@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { LocalStorageService } from "../../Domain/service/LocalStorageService";
+import { GetSearchFilterService } from "../../Domain/service/GetSearchFilterService";
+import { SaveSearchFilterService } from "../../Domain/service/SaveSearchFilterService";
 import useGetAllNews from "../hooks/useGetAllNews";
 import usePagination from "../hooks/usePagination";
 import Card from "./Card";
@@ -9,7 +10,7 @@ import Spinner from "./Spinner";
 
 export default function NewsSection() {
   const [filter, setFilter] = useState<string>(
-    LocalStorageService.getFilter() || "Select yours news"
+    GetSearchFilterService.execute() || "Select yours news"
   );
   const [page, setPage] = useState<number>(0);
   const { onClickBack, onClickNext, pages } = usePagination({
@@ -28,7 +29,7 @@ export default function NewsSection() {
 
   const onSelectFilter = (option: string) => {
     setFilter(option);
-    LocalStorageService.setFilter(option);
+    SaveSearchFilterService.execute(option);
   };
 
   const isFirstPosition = (): boolean => page + 1 === 1;

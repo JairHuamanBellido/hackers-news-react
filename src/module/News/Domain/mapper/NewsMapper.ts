@@ -4,7 +4,9 @@ import { HttpRestApiNewsResponse } from "../../Infrastructure/interface/HttpRest
 import { News } from "../interface/News.interface";
 
 export class NewsMapper {
-  public static fromtHttpToDomainEntities(httpNews: HttpRestApiNewsResponse[]): News[] {
+  public static fromtHttpToDomainEntities(
+    httpNews: HttpRestApiNewsResponse[]
+  ): News[] {
     const validNews = httpNews.filter(
       (news) =>
         isNotNull(news.author) &&
@@ -16,13 +18,21 @@ export class NewsMapper {
     return validNews.map((news) => this._fromHttpToDomainEntity(news));
   }
 
-  private static _fromHttpToDomainEntity(httpNews: HttpRestApiNewsResponse): News {
+  private static _fromHttpToDomainEntity(
+    httpNews: HttpRestApiNewsResponse
+  ): News {
     return {
-      author: httpNews.author,
-      id: httpNews.story_id,
-      time: parseDateToText(httpNews.created_at),
-      title: httpNews.story_title,
-      url: httpNews.story_url,
+      author: httpNews.author as string,
+      id: httpNews.objectID,
+      time: parseDateToText(httpNews.created_at as Date),
+      title: httpNews.story_title as string,
+      url: httpNews.story_url as string,
     };
+  }
+
+  public static fromLocalStorageToDomainEntities(
+    newsJsonStringify: string
+  ): News[] {
+    return JSON.parse(newsJsonStringify) as News[];
   }
 }

@@ -1,9 +1,9 @@
 export interface HttpRestApiNewsResponse {
   story_id: number;
-  author: string;
-  story_title: string;
-  story_url: string;
-  created_at: Date;
+  author: string | null;
+  story_title: string | null;
+  story_url: string | null;
+  created_at: Date | null;
   objectID: string;
 }
 export interface HttpRestApiGeneralResponse {
