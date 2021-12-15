@@ -1,0 +1,62 @@
+@import "../abstracts/mixins";
+@import "../abstracts/colors";
+
+.pagination {
+  margin: 0 auto 32px;
+  @include flex(row, center, center);
+  & .option {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    border: solid 1px #d9d9d9;
+    color: rgba(0, 0, 0, 0.65);
+    @include rounded(6px);
+    @include flex(row, center, center);
+    
+    &.disabled {
+      cursor: not-allowed;
+      opacity: 0.2;
+    }
+    &.active {
+      background: $hacker-news-secondary-color;
+      border: none;
+      color: #fff;
+    }
+
+    &.inactive {
+      background: #fff;
+      border: solid 1px #d9d9d9;
+      color: rgba(0, 0, 0, 0.65);
+    }
+
+    margin: 0 4px;
+    & p {
+      font-size: 14px;
+    }
+
+    & .back-arrow,
+    & .next-arrow {
+      width: 7px;
+      height: 7px;
+      border: 1px solid #2e2e2e;
+      border-right: none;
+      border-top: none;
+    }
+
+    & .back-arrow {
+      transform: translateX(2px) rotate(45deg);
+      -webkit-transform: translateX(2px) rotate(45deg);
+      -moz-transform: translateX(2px) rotate(45deg);
+      -ms-transform: translateX(2px) rotate(45deg);
+      -o-transform: translateX(2px) rotate(45deg);
+    }
+    & .next-arrow {
+      transform: translateX(-2px) rotate(225deg);
+      -webkit-transform: translateX(-2px) rotate(225deg);
+      -moz-transform: translateX(-2px) rotate(225deg);
+      -ms-transform: translateX(-2px) rotate(225deg);
+      -o-transform: translateX(-2px) rotate(225deg);
+    }
+  }
+}

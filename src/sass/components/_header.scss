@@ -1,0 +1,27 @@
+@import "../abstracts/colors";
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+header {
+  width: 100%;
+  height: 114px;
+  padding: 3rem 10rem;
+
+  box-shadow: 0 1px 4px 0 rgba(0, 21, 41, 0.12);
+  background-image: linear-gradient(to bottom, #ececec -32%, #fff 124%);
+  display: flex;
+  align-items: center;
+  & h1 {
+    font-size: 28px;
+    color: $hacker-news-title-color;
+  }
+}
+
+@media screen and(max-width: $table-portrait) {
+  header {
+    padding: 0px;
+    & h1 {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

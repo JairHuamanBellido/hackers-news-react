@@ -1,0 +1,43 @@
+@import "../abstracts/mixins";
+.news-container {
+  width: 80%;
+  position: relative;
+  margin: 5rem auto 0;
+  @include flex(column, flex-start, center);
+
+  & .news-all {
+    width: 100%;
+    margin-top: 4rem;
+  }
+
+  & .news-list,
+  & .loading {
+    margin-top: 32px;
+  }
+  & .news-list {
+    @include flex(row, space-between, center);
+    flex-wrap: wrap;
+  }
+
+  & .loading {
+    width: 100%;
+    @include flex(row, center, center);
+  }
+
+  & .empty-container {
+    width: 100%;
+    @include flex(row, center, center);
+  }
+}
+
+@media screen and(max-width: $table-portrait) {
+  .news-container {
+    width: 90%;
+    margin: 2rem auto 0;
+
+    & .news-all{ 
+      margin-top: 2rem;
+    }
+  }
+
+}
