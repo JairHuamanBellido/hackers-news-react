@@ -10,9 +10,7 @@
   border: 1px solid #979797;
   margin-bottom: 30px;
   background: #fff;
-  &:hover {
-    opacity: 0.4;
-  }
+
   & .content {
     width: 85%;
     padding: 16px 26px;
@@ -39,8 +37,12 @@
     height: 100%;
   }
 }
-
-@media screen and (max-width: $table-portrait) {
+@media screen and(min-width: $tablet-portrait) {
+  &:hover {
+    opacity: 0.4;
+  }
+}
+@media screen and (max-width: $tablet-portrait) {
   .news-card {
     width: 100%;
   }
