@@ -4,7 +4,7 @@ import { HttpRestApiNewsResponse } from "../../Infrastructure/interface/HttpRest
 import { News } from "../interface/News.interface";
 
 export class NewsMapper {
-  public static toNewsDomain(httpNews: HttpRestApiNewsResponse[]): News[] {
+  public static fromtHttpToDomainEntities(httpNews: HttpRestApiNewsResponse[]): News[] {
     const validNews = httpNews.filter(
       (news) =>
         isNotNull(news.author) &&
@@ -13,11 +13,10 @@ export class NewsMapper {
         isNotNull(news.story_url)
     );
 
-    return validNews.map((news) => this._fromHttpToDomain(news));
+    return validNews.map((news) => this._fromHttpToDomainEntity(news));
   }
 
-  private static _fromHttpToDomain(httpNews: HttpRestApiNewsResponse): News {
-    // parseDateToText(httpNews.created_at);
+  private static _fromHttpToDomainEntity(httpNews: HttpRestApiNewsResponse): News {
     return {
       author: httpNews.author,
       id: httpNews.story_id,

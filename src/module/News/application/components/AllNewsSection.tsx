@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { LocalStorageService } from "../../Domain/service/LocalStorageService";
 import useGetAllNews from "../hooks/useGetAllNews";
 import usePagination from "../hooks/usePagination";
 import Card from "./Card";
@@ -7,24 +8,27 @@ import Pagination from "./Pagination";
 import Spinner from "./Spinner";
 
 export default function NewsSection() {
-  const [option, setOption] = useState<string>("Select yours news");
+  const [filter, setFilter] = useState<string>(
+    LocalStorageService.getFilter() || "Select yours news"
+  );
   const [page, setPage] = useState<number>(0);
   const { onClickBack, onClickNext, pages } = usePagination({
     actualPage: page,
   });
   const { data, refetch, isLoading, isFetching, isFetched } = useGetAllNews({
     page: page,
-    technology: option,
+    technology: filter,
   });
 
   useEffect(() => {
-    if (option !== "Select yours news") {
+    if (filter !== "Select yours news") {
       refetch();
     }
-  }, [option, refetch, page]);
+  }, [filter, refetch, page]);
 
-  const onSelectOption = (option: string) => {
-    setOption(option);
+  const onSelectFilter = (option: string) => {
+    setFilter(option);
+    LocalStorageService.setFilter(option);
   };
 
   const isFirstPosition = (): boolean => page + 1 === 1;
@@ -55,7 +59,7 @@ export default function NewsSection() {
 
   return (
     <>
-      <Dropdown onSelectOption={onSelectOption} optionSelected={option} />
+      <Dropdown onSelectOption={onSelectFilter} optionSelected={filter} />
       {isPending && (
         <div className="loading">
           <Spinner />

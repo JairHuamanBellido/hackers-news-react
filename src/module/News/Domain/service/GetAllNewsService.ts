@@ -6,6 +6,6 @@ import { NewsMapper } from "../mapper/NewsMapper";
 export class GetAllNewsService {
   public static async execute(query: QueryNews): Promise<News[]> {
     const httpResponse = await HttRestApiNews.getBy(query);
-    return NewsMapper.toNewsDomain(httpResponse);
+    return NewsMapper.fromtHttpToDomainEntities(httpResponse);
   }
 }
