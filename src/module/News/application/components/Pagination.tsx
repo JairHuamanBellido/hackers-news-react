@@ -19,7 +19,7 @@ export default function Pagination(props: IProps) {
   } = props;
 
   const isSelected = (value: number): string => {
-    return value === actualPage + 1 ? "active" : "inactive";
+    return value === actualPage ? "active" : "inactive";
   };
 
   return (

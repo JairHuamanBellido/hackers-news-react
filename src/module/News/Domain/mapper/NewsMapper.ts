@@ -27,6 +27,7 @@ export class NewsMapper {
       time: parseDateToText(httpNews.created_at as Date),
       title: httpNews.story_title as string,
       url: httpNews.story_url as string,
+      isFavorite: false,
     };
   }
 

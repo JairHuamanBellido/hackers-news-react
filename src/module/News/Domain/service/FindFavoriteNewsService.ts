@@ -3,7 +3,7 @@ import { LocalStorageInfrastructure as LocalStorage } from "../../Infrastructure
 
 export class FindFavoriteNewsService {
   public static execute(news: News): boolean {
-    const localFavoriteNews = LocalStorage.getFavoritesNews();
+    const localFavoriteNews = LocalStorage.getFavoriteNews();
 
     if (localFavoriteNews === null) return false;
 

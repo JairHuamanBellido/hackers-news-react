@@ -9,7 +9,7 @@ export class LocalStorageInfrastructure {
     localStorage.setItem("favorite_news", news);
   }
 
-  public static getFavoritesNews() {
+  public static getFavoriteNews() {
     return localStorage.getItem("favorite_news");
   }
 

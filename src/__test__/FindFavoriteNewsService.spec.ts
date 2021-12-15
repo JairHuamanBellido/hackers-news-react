@@ -9,6 +9,7 @@ describe("Find Favorite News Service", () => {
       time: "2 minutos ago",
       title: "How to be a frontend developer",
       url: "Url",
+      isFavorite: false
     },
   ];
 

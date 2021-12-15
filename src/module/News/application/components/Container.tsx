@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { TabContext } from "../../../../core/context/Tab.context";
 import AllNewsSection from "./AllNewsSection";
+import FavoriteNewsSection from "./FavoriteNewsSection";
 import Tabs from "./Tabs";
 
 export default function Container() {
@@ -16,7 +17,8 @@ export default function Container() {
       >
         <Tabs labels={["All", "My faves"]} />
         <div className="news-all">
-          <AllNewsSection />
+          {tabActive === "All" && <AllNewsSection />}
+          {tabActive === "My faves" && <FavoriteNewsSection />}
         </div>
       </TabContext.Provider>
     </div>

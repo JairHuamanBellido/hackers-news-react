@@ -1,5 +1,4 @@
 import { News } from "../module/News/Domain/interface/News.interface";
-import { NewsMapper } from "../module/News/Domain/mapper/NewsMapper";
 import { GetAllNewsService } from "../module/News/Domain/service/GetAllNewsService";
 import { HttRestApiNews } from "../module/News/Infrastructure/HttpRestApiNews";
 import { HttpRestApiNewsResponse as HttpResponse } from "../module/News/Infrastructure/interface/HttpRestApiNewsResponse";
@@ -31,6 +30,7 @@ describe("Get All News Service", () => {
       time: "0 minutes ago",
       title: "How to be a frontend developer",
       url: "Url",
+      isFavorite: false,
     },
   ];
 
@@ -49,7 +49,7 @@ describe("Get All News Service", () => {
 
     expect(responseService).toHaveLength(1);
     expect(responseService.length > 1).toBe(false);
-    
+
     expect(searchResult).toBe(true);
     expect(responseService[0].time).toBe("0 minutes ago");
   });

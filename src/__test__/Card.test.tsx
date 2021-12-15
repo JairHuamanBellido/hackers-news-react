@@ -10,16 +10,20 @@ describe("Card component", () => {
     time: "3 minutes ago",
     title: "How to be a frontend developer",
     url: "url",
+    isFavorite: false,
   };
+
+  const onToggleFavorite = jest.fn();
   it("should render without crashing", () => {
-    render(<Card news={newsMock} />);
+    render(<Card onToggleFavorite={onToggleFavorite} news={newsMock} />);
   });
 
   it("should display a information", () => {
-    render(<Card news={newsMock} />);
+    render(<Card onToggleFavorite={onToggleFavorite} news={newsMock} />);
 
-    expect(screen.getByText(/Jair Orlando/i)).toBeInTheDocument()
-    expect(screen.getByText(/How to be a frontend developer/i)).toBeInTheDocument()
-    
-  })
+    expect(screen.getByText(/Jair Orlando/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/How to be a frontend developer/i)
+    ).toBeInTheDocument();
+  });
 });

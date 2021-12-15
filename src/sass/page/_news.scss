@@ -23,4 +23,9 @@
     width: 100%;
     @include flex(row, center, center);
   }
+
+  & .empty-container {
+    width: 100%;
+    @include flex(row, center, center);
+  }
 }

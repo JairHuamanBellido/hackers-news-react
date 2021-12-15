@@ -2,29 +2,17 @@ import { News } from "../../Domain/interface/News.interface";
 import Time from "../../../../assets/icon-time.svg";
 import HeartOutlined from "../../../../assets/icon-hearth-outlined.svg";
 import HeartFilled from "../../../../assets/icon-hearth-filled.svg";
-import { useState } from "react";
-import { FindFavoriteNewsService } from "../../Domain/service/FindFavoriteNewsService";
-import { SaveFavoriteNewsService } from "../../Domain/service/SaveFavoriteNewsService";
-import { RemoveFavoriteNewsService } from "../../Domain/service/RemoveFavoriteNewsService";
 interface IProps {
   news: News;
+  onToggleFavorite(news: News): void;
 }
-export default function Card(props: IProps) {
-  const { author, id, time, title, url } = props.news;
 
-  const [isFavorite, setFavorite] = useState<boolean>(
-    FindFavoriteNewsService.execute(props.news)
-  );
+export default function Card(props: IProps) {
+  const { news, onToggleFavorite } = props;
+  const { author, id, isFavorite, time, title, url } = news;
 
   const onClick = () => {
-    setFavorite((prevState) => {
-      if (prevState === false) {
-        SaveFavoriteNewsService.execute(props.news);
-      } else {
-        RemoveFavoriteNewsService.execute(props.news);
-      }
-      return !prevState;
-    });
+    onToggleFavorite(news);
   };
   return (
     <div data-testid="card" className="news-card">
@@ -45,8 +33,15 @@ export default function Card(props: IProps) {
           <p>{title}</p>
         </div>
       </a>
-      <div onClick={onClick} className="favorite">
-        <img src={isFavorite ? HeartFilled : HeartOutlined} alt={title} />
+      <div
+        data-testid={`favorite-${id}`}
+        onClick={onClick}
+        className="favorite"
+      >
+        <img
+          src={isFavorite ? HeartFilled : HeartOutlined}
+          alt={`${isFavorite ? "favorite" : "no-favorite"}`}
+        />
       </div>
     </div>
   );

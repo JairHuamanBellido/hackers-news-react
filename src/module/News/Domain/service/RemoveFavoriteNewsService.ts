@@ -3,7 +3,7 @@ import { News } from "../interface/News.interface";
 
 export class RemoveFavoriteNewsService {
   public static execute(news: News): void {
-    const localFavoriteNews = LocalStorage.getFavoritesNews();
+    const localFavoriteNews = LocalStorage.getFavoriteNews();
 
     if (localFavoriteNews === null) return;
 

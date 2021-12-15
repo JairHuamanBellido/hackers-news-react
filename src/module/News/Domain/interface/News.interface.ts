@@ -4,4 +4,5 @@ export interface News {
   author: string;
   url: string;
   title: string;
+  isFavorite:boolean;
 }
