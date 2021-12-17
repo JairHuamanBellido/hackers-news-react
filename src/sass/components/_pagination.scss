@@ -5,15 +5,15 @@
   margin: 0 auto 32px;
   @include flex(row, center, center);
   & .option {
+    @include rounded(6px);
+    @include flex(row, center, center);
     cursor: pointer;
     width: 32px;
     height: 32px;
     background: #fff;
     border: solid 1px #d9d9d9;
     color: rgba(0, 0, 0, 0.65);
-    @include rounded(6px);
-    @include flex(row, center, center);
-    
+
     &.disabled {
       cursor: not-allowed;
       opacity: 0.2;

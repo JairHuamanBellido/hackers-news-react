@@ -7,12 +7,12 @@
     color: #343434;
   }
   & .select {
+    @include rounded(4px);
+    @include flex(row, space-between, center);
     width: 100%;
     height: 32px;
     border: 1px solid #2e2e2e;
     padding: 5px 12px;
-    @include rounded(4px);
-    @include flex(row, space-between, center);
     cursor: pointer;
 
     & .arrow {
@@ -26,7 +26,7 @@
       -moz-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
       -o-transform: rotate(-45deg);
-}
+    }
   }
   & .dropdown {
     position: absolute;
@@ -37,12 +37,12 @@
     z-index: 99999;
     background: #fff;
     & .option {
+      @include flex(row, flex-start, center);
       width: 100%;
       height: 48px;
       padding: 12px;
       cursor: pointer;
       background: #fff;
-      @include flex(row, flex-start, center);
       & p {
         margin-left: 12px;
       }
